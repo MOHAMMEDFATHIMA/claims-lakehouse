@@ -1,0 +1,11 @@
+name: claims_lakehouse
+version: "1.0.0"
+config-version: 2
+profile: claims_lakehouse
+model-paths: ["models"]
+models:
+  claims_lakehouse:
+    staging:
+      +materialized: view
+    gold:
+      +materialized: table

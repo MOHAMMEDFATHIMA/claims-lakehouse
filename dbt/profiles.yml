@@ -1,0 +1,16 @@
+claims_lakehouse:
+  target: duckdb
+  outputs:
+    duckdb:
+      type: duckdb
+      path: ../data/gold/claims.duckdb
+    # Uncomment and fill in to run the same models on Snowflake:
+    # snowflake:
+    #   type: snowflake
+    #   account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+    #   user: "{{ env_var('SNOWFLAKE_USER') }}"
+    #   password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+    #   role: TRANSFORMER
+    #   database: CLAIMS
+    #   warehouse: COMPUTE_WH
+    #   schema: GOLD

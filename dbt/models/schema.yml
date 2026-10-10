@@ -1,0 +1,13 @@
+version: 2
+models:
+  - name: stg_claims
+    columns:
+      - name: claim_id
+        tests: [unique, not_null]
+      - name: line_of_business
+        tests:
+          - accepted_values:
+              values: [WORKERS_COMP, COMMERCIAL_AUTO, COMMERCIAL_UMBRELLA, GENERAL_LIABILITY]
+      - name: incurred_amount
+        tests: [not_null]
+  - name: fct_claims_monthly
